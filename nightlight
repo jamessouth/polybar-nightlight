@@ -1,0 +1,14 @@
+type = custom/ipc
+
+hook-0 = bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata + eDP-1
+
+hook-1 = bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata - eDP-1
+
+format-prefix = "nl "
+format-font = 1
+format-foreground = ${colors.steel}
+
+initial = 1
+click-left = polybar-msg -p %pid% hook nightlight 1
+click-right = polybar-msg -p %pid% hook nightlight 2
+
