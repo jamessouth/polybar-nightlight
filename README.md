@@ -1,10 +1,21 @@
-# polybar-nightlight &middot; ![](https://img.shields.io/badge/Linux-d.svg?logoWidth=48.25&labelColor=white&style=for-the-badge&color=fcc624&logo=Linux) ![](https://img.shields.io/badge/bash-d.svg?logoWidth=41&labelColor=white&style=for-the-badge&color=4eaa25&logo=GNU%20Bash) ![](https://img.shields.io/badge/Xorg-d.svg?logoWidth=43&labelColor=white&style=for-the-badge&color=f28834&logo=X.Org) ![](https://img.shields.io/badge/awesome-yes-brightgreen.svg)
-Gamma control/blue light filter module for Polybar
+# polybar-nightlight &middot; ![](https://img.shields.io/badge/Linux-d.svg?logoWidth=48.25&labelColor=f6f6f6&style=for-the-badge&color=fcc624&logo=Linux) ![](https://img.shields.io/badge/bash-d.svg?logoWidth=41&labelColor=f6f6f6&style=for-the-badge&color=4eaa25&logo=GNU%20Bash) ![](https://img.shields.io/badge/Xorg-d.svg?logoWidth=43&labelColor=f6f6f6&style=for-the-badge&color=f28834&logo=X.Org) ![](https://img.shields.io/badge/awesome-yes-brightgreen.svg)
+
+
+<p>
+  Gamma control/blue light filter module for 
+  <img width=133 height=36 src="https://github.com/polybar/polybar/blob/master/banner.png" alt="Polybar">
+</p>
 
 ## Description
 This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does not depend on `redshift`. Simply click left/right to move between various 'profiles' of `r:g:b` which you have total control over. It uses `ipc` since there's no need to poll user settings, but I have provided a way to do that as well. Wayland is not supported, it apparently does not have an equivalent to `xrandr`.
 
 ![screenshot](screenshot.png)
+
+
+
+
+
+
 
 ## Usage
 
