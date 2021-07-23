@@ -57,10 +57,10 @@ The script calls in the hooks of the `nightlight` module can be keybound so you 
 #### In your keybinding file:
 ```
 super + r
-        bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata + eDP-1
+    bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata + eDP-1
         
 super + shift + r
-        bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata - eDP-1
+    bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata - eDP-1
 ```
 
 #### Comment out the last line of `nlscript.sh` since you won't need to echo to Polybar:
