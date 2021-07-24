@@ -70,7 +70,7 @@ echo ${new_index} > "$indexFile"
 #echo ${gamma}
 ```
 
-#### Use a custom/script module:
+#### Use a custom/script module in `nightlight`:
 ```
 type = custom/script
 
