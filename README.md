@@ -8,7 +8,7 @@ Gamma control/blue light filter module for
 ## Description
 This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses Polybar's `ipc` function since there's no need to poll user settings, but I also show a way to do that below. Wayland is not supported; it apparently does not have an equivalent to `xrandr`.
 
-![screenshot](screenshot.png)
+![screenshot](screenshot.gif)
 
 
 ## Usage
@@ -102,4 +102,4 @@ exec = ~/.config/polybar/nlgetter.sh
 
 
 ## Keyboard control of `ipc` module
-I tried to find an easy, no-dep way to simulate a mouse click on the hit area of a Polybar module but I wasn't able to. There are packages such as `xdotool` and `xautomation` that can be used. To get the hit area of a module run Polybar with `trace` logging and mouse over it. You should then be able to determine a bounding box for use with such tools. Also see Mouse Keys on the [ArchWiki Accessibility page](https://wiki.archlinux.org/title/Accessibility#Mouse_keys). Mouse Keys is an easy way to control the mouse with the keyboard.
+I tried to find an easy, no-dep way to simulate a mouse click on the hit area of a Polybar module but I wasn't able to. There are packages such as `xdotool` and `xautomation` that can be used. To get the hit area of a module run Polybar with `trace` logging and mouse over it. See also `xev`. You should then be able to determine a bounding box for use with such tools. Also see Mouse Keys on the [ArchWiki Accessibility page](https://wiki.archlinux.org/title/Accessibility#Mouse_keys). Mouse Keys is an easy way to control the mouse with the keyboard.
