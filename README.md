@@ -35,11 +35,11 @@ modules-left/center/right = ... nightlight ...
 enable-ipc = true
 ```
 
-#### Data Persistence with `nightline.sh`:
+#### Data Persistence with `nightlight.sh`:
 On the initial run, hook-0 is called (with no arg). If available, the script will use the value in `$XDG_DATA_HOME/nightlight`. Otherwise, it will use the last element of the `profiles` array and write the previously mentioned state file.
 
 Left click calls hook-1 which passes `-` to the script. We're moving back through our list of profiles until we reach the beginning.
 
-Right click calls hook-2 which passes `+` to the script. We're moving forward through the list of profiles until we can not continue.'
+Right click calls hook-2 which passes `+` to the script. We're moving forward through the list of profiles until we can not continue.
 
 The list of displays is hardcoded in the script's `displays` array. This could certainly stand to be made more dynamic.
