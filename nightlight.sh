@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# displays=(DisplayPort-0 DisplayPort-1)
-displays=(eDP-1)
+displays=(eDP-1) # or DisplayPort-0 DisplayPort-1 etc.
 profiles=(
 	1:1:1
 	1:.97:.94
