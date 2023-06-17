@@ -1,105 +1,56 @@
-# polybar-nightlight &middot; ![](https://img.shields.io/badge/Linux-d.svg?logoWidth=48.25&labelColor=f6f6f6&style=for-the-badge&color=fcc624&logo=Linux) ![](https://img.shields.io/badge/bash-d.svg?logoWidth=41&labelColor=f6f6f6&style=for-the-badge&color=4eaa25&logo=GNU%20Bash) ![](https://img.shields.io/badge/Xorg-d.svg?logoWidth=43&labelColor=f6f6f6&style=for-the-badge&color=f28834&logo=X.Org)
+<h1 align="center">polybar-nightlight</h1>
 
-Gamma control/blue light filter module for
+<p>&nbsp;</p>
 
-[![Polybar](https://github.com/polybar/polybar/blob/master/banner.png)](https://github.com/polybar/polybar)
+A gamma control/blue light filter module for your
 
+<div align="center">
+	<picture>
+ 	 <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/polybar/polybar/master/doc/_static/banner-dark-mode.png">
+ 	 <img alt="polybar logo" src="https://raw.githubusercontent.com/polybar/polybar/master/doc/_static/banner.png">
+	</picture>
+</div>
+
+<p>&nbsp;</p>
+
+<p align="center">
+	<a href="https://github.com/jamessouth/polybar-nightlight/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jamessouth/polybar-nightlight"></a>
+	<a href="https://archlinux.org/"><img src="https://img.shields.io/badge/Linux-d.svg?logoWidth=40&labelColor=d35e49&color=E3C567&logoColor=000000&logo=Linux"></a>
+	<a href="https://www.gnu.org/software/bash/manual/"><img src="https://img.shields.io/badge/Bash-d.svg?logoWidth=40&labelColor=4eaa25&color=293137&logoColor=ffffff&logo=GNU%20Bash"></a>
+	<a href="https://www.x.org/wiki/"><img src="https://img.shields.io/badge/Xorg-d.svg?logoWidth=40&labelColor=f28834&color=000000&logoColor=ffffff&logo=X.Org"></a>
+	<img src="https://img.shields.io/badge/awesome-%C6%94%F0%9D%9A%BA%C5%9E-235789.svg">
+</p>
+<p>&nbsp;</p>
 
 ## Description
-This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses Polybar's `ipc` function since there's no need to poll user settings, but I also show a way to do that below. Wayland is not supported; it apparently does not have an equivalent to `xrandr`.
+This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses Polybar's `ipc` function since there's no need to poll user settings, but I will show a way to do that. Wayland is not currently supported.
 
-![screenshot](screenshot.gif)
+[[https://github.com/jamessouth/polybar-nightlight/blob/master/screenshot.gif|alt=clicking through profiles]]
+<p>&nbsp;</p>
 
+## Installation
+```bash
+TODO direc="$HOME/.config/polybar/timebar" && curl -JOL https://github.com/jamessouth/polybar-time-bar/blob/master/timebar.zip?raw=true && mkdir -pv $direc && unzip timebar.zip -d $direc && chmod -R +x $direc && rm timebar.zip
+```
+This will:
+* set the `direc` variable to `.config/polybar/timebar`
+* `curl` the zip file to your computer
+* `mkdir` the directory stored in `$direc`
+* `unzip` the archive into the directory
+* `chmod +x` the scripts in the directory
+* `rm` the zip file
+<p>&nbsp;</p>
 
 ## Usage
-Simply click left/right to move among various `r:g:b` profiles in the `nldata` file.
-
-#### In your `config`:
-```
-[module/nightlight]
-include-file = /home/username/.config/polybar/nightlight
-```
-
-#### In your `bar`:
-```
-modules-left/center/right = ... nightlight ... 
-enable-ipc = true
-```
-
-#### `nightlight`:
-The hooks call `nlscript.sh`, passing in:
-* `nlindex`
-* `nldata`
-* `+` or `-` to move up or down your list of profiles
-* the name(s) of your display(s) (run `xrandr` to get their names)
-
-I only have a laptop so I have not tested multiple monitors. I think passing in additional display names and uncommenting the corresponding `xrandr` calls in `nlscript.sh` should work. 
-
-#### `nldata`:
-A list of `red:green:blue` profiles lightly adapted from [here](https://askubuntu.com/questions/1003101/how-to-use-xrandr-gamma-for-gnome-night-light-like-usage).
-
-#### `nlindex`:
-Stores the index of the current profile. 
-
-#### `nlscript.sh`:
-Sets the new index according to your `+` or `-` input, with min: 1 and max: length of `nldata`. Sets the new gamma value, updates the index, and echoes the new value to Polybar.
-
-#### In your `bspwmrc` or similar (optional):
-```
-wc -l ~/.config/polybar/nldata | cut -d' ' -f1 > ~/.config/polybar/nlindex
-```
-This will reset your `nlindex` on startup to be the number of lines in `nldata`, which will set your gamma to your last profile. Here that is the default `1:1:1` so as to start the day fresh and bright with no blue light filter effect.
+Please see the wiki.
+<p>&nbsp;</p>
 
 
-## If you would rather not use `ipc` and want instead to poll the module at an interval
-The script calls in the hooks of the `nightlight` module can be keybound so you can adjust the `nlindex` that way:
-
-#### In your keybinding file:
-```
-super + r
-    bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata + eDP-1
-        
-super + shift + r
-    bash ~/.config/polybar/nlscript.sh ~/.config/polybar/nlindex ~/.config/polybar/nldata - eDP-1
-```
-
-#### Comment out the last line of `nlscript.sh` since you won't need to echo to Polybar:
-```
-...
-echo ${new_index} > "$indexFile"
-#echo ${gamma}
-```
-
-#### Use a custom/script module in `nightlight`:
-```
-type = custom/script
-
-exec = xrandr --verbose | grep Gamma | cut -d' ' -f7-
-interval = 2
-format = <label>
-format-prefix = "nl "
-format-font = 1
-format-foreground = ${colors.steel}
-label = %{T1}%output%
-```
-
-This example directly calls `xrandr`. This works, but the output of `xrandr` is the inverse (1/x) of the gamma value you use, rounded to the nearest tenth, so your value may not be what you see in Polybar. To show the precise value you submitted, you can re-invert the `xrandr` output, but due to the rounding this is not reliable. One way to deal with this is to use a separate getter script like this...:
-```
-indexFile="$1"
-
-dataFile="$2"
-
-index=$(cat "$indexFile")
-
-echo $(sed -n "${index}"p "$dataFile")
-
-```
-
-instead of executing `xrandr` directly:
-```
-exec = ~/.config/polybar/nlgetter.sh
-```
 
 
-## Keyboard control of `ipc` module
-I tried to find an easy, no-dep way to simulate a mouse click on the hit area of a Polybar module but I wasn't able to. There are packages such as `xdotool` and `xautomation` that can be used. To get the hit area of a module run Polybar with `trace` logging and mouse over it. See also `xev`. You should then be able to determine a bounding box for use with such tools. Also see Mouse Keys on the [ArchWiki Accessibility page](https://wiki.archlinux.org/title/Accessibility#Mouse_keys). Mouse Keys is an easy way to control the mouse with the keyboard.
+
+
+
+
+
+
