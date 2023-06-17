@@ -25,7 +25,7 @@ A gamma control/blue light filter module for your
 ## Description
 This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses Polybar's `ipc` function since there's no need to poll user settings, but I will show a way to do that. Wayland is not currently supported.
 
-[[https://github.com/jamessouth/polybar-nightlight/blob/master/screenshot.gif|alt=clicking through profiles]]
+<img alt="clicking through rgb profiles" src="screenshot.gif">
 <p>&nbsp;</p>
 
 ## Installation
