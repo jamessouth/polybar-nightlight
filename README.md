@@ -23,22 +23,19 @@ A gamma control/blue light filter module for your
 <p>&nbsp;</p>
 
 ## Description
-This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses Polybar's `ipc` function since there's no need to poll user settings, but I will show a way to do that. Wayland is not currently supported.
+This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses polybar's `ipc` function since there's no need to poll user settings, but I will show a way to do that. Wayland is not currently supported.
 
 <img alt="clicking through rgb profiles" src="screenshot.gif">
 <p>&nbsp;</p>
 
 ## Installation
 ```bash
-TODO direc="$HOME/.config/polybar/timebar" && curl -JOL https://github.com/jamessouth/polybar-time-bar/blob/master/timebar.zip?raw=true && mkdir -pv $direc && unzip timebar.zip -d $direc && chmod -R +x $direc && rm timebar.zip
+fn="$HOME/.config/polybar/nightlight.sh" && curl -o $fn https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/nightlight.sh && chmod +x $fn
 ```
 This will:
-* set the `direc` variable to `.config/polybar/timebar`
-* `curl` the zip file to your computer
-* `mkdir` the directory stored in `$direc`
-* `unzip` the archive into the directory
-* `chmod +x` the scripts in the directory
-* `rm` the zip file
+* set the `fn` variable to `~.config/polybar/nightlight.sh`
+* `curl` the script to that location
+* `chmod +x` the script
 <p>&nbsp;</p>
 
 ## Usage
