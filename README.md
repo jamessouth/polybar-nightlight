@@ -23,7 +23,11 @@ A gamma control/blue light filter module for your
 <p>&nbsp;</p>
 
 ## Description
-This module provides the user with direct control (via `xrandr`) of their `X` display's gamma output to create a blue light filter/night shift effect. It does *not* depend on `redshift`. It uses polybar's `ipc` function since there's no need to poll user settings, but I will show a way to do that. Wayland is not currently supported.
+This module provides a blue light filter/night shift effect for `X` displays. It:
+* uses polybar's `ipc` function
+* calls the `xrandr` command to change the gamma output
+* does *not* depend on `redshift`
+Wayland is not currently supported.
 
 <img alt="clicking through rgb profiles" src="screenshot.gif">
 <p>&nbsp;</p>
@@ -41,13 +45,4 @@ This will:
 ## Usage
 Please see the wiki.
 <p>&nbsp;</p>
-
-
-
-
-
-
-
-
-
 
