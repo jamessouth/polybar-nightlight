@@ -27,7 +27,6 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 * uses polybar's `ipc` function
 * calls the `xrandr` command to change the gamma output
 * does *not* depend on `redshift`
-Wayland is not currently supported.
 
 <img alt="clicking through rgb profiles" src="screenshot.gif">
 <p>&nbsp;</p>
