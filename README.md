@@ -1,4 +1,9 @@
-<h1 align="center">polybar-nightlight</h1>
+<h1 align="center">
+	<picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/poly_night_dark.png">
+        <img alt="polybar-nightlight" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/poly_night.png">
+    </picture>
+</h1>
 
 <p>&nbsp;</p>
 
