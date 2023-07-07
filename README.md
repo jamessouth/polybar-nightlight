@@ -1,9 +1,9 @@
-<h1 align="center">
+<p align="center">
 	<picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/poly_night_dark.png">
         <img alt="polybar-nightlight" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/poly_night.png">
     </picture>
-</h1>
+</p>
 
 <p>&nbsp;</p>
 
@@ -27,12 +27,13 @@ A gamma control/blue light filter module for your
 </p>
 <p>&nbsp;</p>
 
-<h2>
+<p>
 	<picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/desc_dark.png">
         <img alt="description" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/desc.png">
     </picture>
-</h2>
+</p>
+
 This module provides a blue light filter/night shift effect for `X` displays. It:
 * uses polybar's `ipc` function
 * calls the `xrandr` command to change the gamma output
@@ -41,12 +42,13 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 <img alt="clicking through rgb profiles" src="imgs/screenshot.gif">
 <p>&nbsp;</p>
 
-<h2>
+<p>
 	<picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/inst_dark.png">
         <img alt="installation" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/inst.png">
     </picture>
-</h2>
+</p>
+
 ```bash
 fn="$HOME/.config/polybar/nightlight.sh" && curl -o $fn https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/nightlight.sh && chmod +x $fn
 ```
@@ -56,12 +58,13 @@ This will:
 * `chmod +x` the script
 <p>&nbsp;</p>
 
-<h2>
+<div><h3>
 	<picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/usage_dark.png">
         <img alt="usage" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/usage.png">
     </picture>
-</h2>
+</h3></div>
+
 Please see the wiki.
 <p>&nbsp;</p>
 
