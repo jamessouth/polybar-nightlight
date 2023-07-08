@@ -1,7 +1,7 @@
 <p align="center">
 	<picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/poly_night_dark.png">
-        <img alt="polybar-nightlight" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/poly_night.png">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/title_dark.jpg">
+        <img alt="polybar-nightlight" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/title.jpg">
     </picture>
 </p>
 
@@ -29,8 +29,8 @@ A gamma control/blue light filter module for your
 
 <p>
 	<picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/desc_dark.png">
-        <img alt="description" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/desc.png">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/desc_dark.jpg">
+        <img alt="description" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/desc.jpg">
     </picture>
 </p>
 
@@ -44,8 +44,8 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 
 <p>
 	<picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/inst_dark.png">
-        <img alt="installation" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/inst.png">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/inst_dark.jpg">
+        <img alt="installation" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/inst.jpg">
     </picture>
 </p>
 
@@ -58,12 +58,12 @@ This will:
 * `chmod +x` the script
 <p>&nbsp;</p>
 
-<div><h3>
+<p>
 	<picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/usage_dark.png">
-        <img alt="usage" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/usage.png">
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/usage_dark.jpg">
+        <img alt="usage" src="https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/imgs/usage.jpg">
     </picture>
-</h3></div>
+</p>
 
 Please see the wiki.
 <p>&nbsp;</p>
