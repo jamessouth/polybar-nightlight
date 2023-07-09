@@ -5,8 +5,6 @@
     </picture>
 </p>
 
-<p>&nbsp;</p>
-
 A gamma control/blue light filter module for your
 
 <div align="center">
@@ -38,6 +36,7 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 * uses polybar's `ipc` function
 * calls the `xrandr` command to change the gamma output
 * does *not* depend on `redshift`
+* can be automated to run on a schedule
 
 <img alt="clicking through rgb profiles" src="imgs/screenshot.gif">
 <p>&nbsp;</p>
@@ -55,7 +54,7 @@ fn="$HOME/.config/polybar/nightlight.sh" && curl -o $fn https://raw.githubuserco
 This will:
 * set the `fn` variable to `~.config/polybar/nightlight.sh`
 * `curl` the script to that location
-* `chmod +x` the script
+* `chmod +x` the script to make it executable
 <p>&nbsp;</p>
 
 <p>
@@ -67,4 +66,3 @@ This will:
 
 Please see the wiki.
 <p>&nbsp;</p>
-
