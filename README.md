@@ -66,3 +66,9 @@ This will:
 
 Please see the wiki.
 <p>&nbsp;</p>
+
+## My other polybar modules
+Please check out:
+  * [polybar-time-bar](https://github.com/jamessouth/polybar-time-bar)
+  * [polybar-binary-clock-fonts](https://github.com/jamessouth/polybar-binary-clock-fonts)
+<p>&nbsp;</p>
