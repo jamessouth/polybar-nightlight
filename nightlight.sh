@@ -29,6 +29,7 @@ len=${#profiles[@]}
 case "$1" in
 	"+" )    new_ind=$((ind+1 > len-1 ? len-1 : ind+1));;
 	"-" )    new_ind=$((ind-1 < 0 ? 0 : ind-1));;
+	"" )	 new_ind=${ind};;
 esac
 
 new_prof="${profiles[$new_ind]}"
@@ -36,6 +37,10 @@ new_prof="${profiles[$new_ind]}"
 for display in "${displays[@]}"; do
 	xrandr --output "$display" --gamma "${new_prof}"
 done
+
+if [[ -z "$new_ind" ]]; then
+	new_ind=0
+fi
 
 echo "ind=${new_ind}" > "$config"
 echo "${new_prof}"
