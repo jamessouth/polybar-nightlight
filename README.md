@@ -64,7 +64,21 @@ This will:
     </picture>
 </p>
 
-Please see the wiki.
+### Add this to your config.ini of polybar
+
+```
+[module/nightlight]
+type = custom/script
+exec = ~/.config/polybar/nightlight.sh
+format-font = 1
+format-foreground = ${colors.primary}
+
+scroll-up = bash ~/.config/polybar/nightlight.sh -
+scroll-down = bash ~/.config/polybar/nightlight.sh +
+```
+
+This code also allows you to change the color scrolling up and down in the module.
+
 <p>&nbsp;</p>
 
 ## My other polybar modules
