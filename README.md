@@ -38,10 +38,7 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 * does *not* depend on `redshift`
 * can be automated to run on a schedule
 
-<video width="76" height="42" loop autoplay muted playsinline>
-  <source src="imgs/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<img alt="scrolling through rgb profiles" src="imgs/demo.gif">
 <p>&nbsp;</p>
 
 <p>
