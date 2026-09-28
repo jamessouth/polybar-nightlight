@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+mapfile -t displays < <(xrandr | grep -w connected | awk '{print $1}')
+
+profiles=(1:1:1	1:.97:.94 1:.92:.88 1:.88:.81 1:.84:.73	1:.80:.65 1:.76:.57 1:.71:.49 1:.68:.41	1:.64:.33 1:.59:.25 1:.54:.17 1:.42:.13	1:.38:.08)
+
+icons=(              )
+
+for display in "${displays[@]}"; do
+	xrandr --output "$display" --gamma "${profiles[$1]}"
+done
+
+echo "${icons[$1]}"
+

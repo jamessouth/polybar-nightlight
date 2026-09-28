@@ -38,7 +38,10 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 * does *not* depend on `redshift`
 * can be automated to run on a schedule
 
-<img alt="clicking through rgb profiles" src="imgs/screenshot.gif">
+<video width="76" height="42" loop autoplay muted playsinline>
+  <source src="imgs/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <p>&nbsp;</p>
 
 <p>
@@ -49,10 +52,10 @@ This module provides a blue light filter/night shift effect for `X` displays. It
 </p>
 
 ```bash
-fn="$HOME/.config/polybar/nightlight.sh" && curl -o $fn https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/nightlight.sh && chmod +x $fn
+fn="$HOME/.config/polybar/scripts/nightlight" && curl -o $fn https://raw.githubusercontent.com/jamessouth/polybar-nightlight/master/nightlight && chmod +x $fn
 ```
 This will:
-* set the `fn` variable to `~.config/polybar/nightlight.sh`
+* set the `fn` variable to `~/.config/polybar/scripts/nightlight`
 * `curl` the script to that location
 * `chmod +x` the script to make it executable
 <p>&nbsp;</p>
